@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>$(Company)</Authors>
+    <Description>Prevents your application or library from being used in Russia and Belarus.</Description>
+    <PackageTags>protest source-only</PackageTags>
+    <PackageProjectUrl>https://github.com/Tyrrrz/FuckRussia</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/Tyrrrz/FuckRussia/blob/master/Changelog.md</PackageReleaseNotes>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <DevelopmentDependency>true</DevelopmentDependency>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../Readme.md" Pack="true" PackagePath="" Visible="false" />
+    <Content Include="*.cs" Pack="true" PackagePath="contentFiles/cs/any/FuckRussia" Visible="false" BuildAction="compile" />
+    <Content Include="*.cs" Pack="true" PackagePath="content/FuckRussia" Visible="false" BuildAction="compile" />
+  </ItemGroup>
+
+</Project>
