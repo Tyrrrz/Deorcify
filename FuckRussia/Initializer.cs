@@ -3,9 +3,22 @@ using System.Globalization;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.Win32;
 
 namespace FuckRussia;
+
+#if NET20_OR_GREATER
+file enum OSPlatform
+{
+    Windows,
+    Linux,
+    OSX
+}
+
+file static class RuntimeInformation
+{
+    public static bool IsOSPlatform(OSPlatform osPlatform) => osPlatform == OSPlatform.Windows;
+}
+#endif
 
 #pragma warning disable CA2255
 internal static partial class Initializer
@@ -35,9 +48,7 @@ internal static partial class Initializer
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            var region = Registry.CurrentUser
-                .OpenSubKey(@"Control Panel\International\Geo", false)?
-                .GetValue("Name") as string;
+            var region = GetCurrentUserRegistryValue(@"Control Panel\International\Geo", "Name");
 
             if (string.Equals(region, "ru", StringComparison.OrdinalIgnoreCase) ||
                 string.Equals(region, "by", StringComparison.OrdinalIgnoreCase))
@@ -68,7 +79,7 @@ internal static partial class Initializer
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            MessageBox(IntPtr.Zero, message, "Restricted region", 0x00000010);
+            ShowErrorMessageBox("Restricted region", message);
             Environment.Exit(1);
         }
         else if (IsConsoleAttached())
