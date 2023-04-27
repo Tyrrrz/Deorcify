@@ -11,18 +11,16 @@
     <Authors>$(Company)</Authors>
     <Description>Prevents your application or library from being used in Russia and Belarus.</Description>
     <PackageTags>protest source-only</PackageTags>
-    <PackageProjectUrl>https://github.com/Tyrrrz/FuckRussia</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/Tyrrrz/FuckRussia/blob/master/Changelog.md</PackageReleaseNotes>
-    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/Tyrrrz/Deorcify</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/Tyrrrz/Deorcify/blob/master/Changelog.md</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <DevelopmentDependency>true</DevelopmentDependency>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../Readme.md" Pack="true" PackagePath="" Visible="false" />
-    <Content Include="*.cs" Pack="true" PackagePath="contentFiles/cs/any/FuckRussia" Visible="false" BuildAction="compile" />
-    <Content Include="*.cs" Pack="true" PackagePath="content/FuckRussia" Visible="false" BuildAction="compile" />
+    <Content Include="*.cs" Pack="true" PackagePath="contentFiles/cs/any/Deorcify" Visible="false" BuildAction="compile" />
+    <Content Include="*.cs" Pack="true" PackagePath="content/Deorcify" Visible="false" BuildAction="compile" />
   </ItemGroup>
 
 </Project>

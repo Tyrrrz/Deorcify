@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace FuckRussia;
+namespace Deorcify;
 
 file static class NativeMethods
 {

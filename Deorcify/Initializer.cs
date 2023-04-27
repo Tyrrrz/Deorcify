@@ -4,32 +4,22 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace FuckRussia;
-
-#if NET20_OR_GREATER
-file enum OSPlatform
-{
-    Windows,
-    Linux,
-    OSX
-}
-
-file static class RuntimeInformation
-{
-    public static bool IsOSPlatform(OSPlatform osPlatform) => osPlatform == OSPlatform.Windows;
-}
-#endif
+namespace Deorcify;
 
 #pragma warning disable CA2255
 internal static partial class Initializer
 {
     private static bool IsBypassed() =>
         string.Equals(
+            Environment.GetEnvironmentVariable("SLAVA_UKRAINI"),
+            "1",
+            StringComparison.OrdinalIgnoreCase
+        ) ||
+        string.Equals(
             Environment.GetEnvironmentVariable("FUCK_RUSSIA"),
             "1",
             StringComparison.OrdinalIgnoreCase
         ) ||
-        // Legacy environment variable
         string.Equals(
             Environment.GetEnvironmentVariable("RUSNI"),
             "PYZDA",
@@ -74,7 +64,7 @@ internal static partial class Initializer
 
             If you believe this to be an error, check your system settings and make sure your country and region are configured correctly.
 
-            If you wish to bypass this check, set the environment variable `FUCK_RUSSIA=1` in your system settings.
+            If you wish to bypass this check, set the environment variable `SLAVA_UKRAINI=1` in your system settings.
             """;
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
