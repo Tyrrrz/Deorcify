@@ -8,16 +8,16 @@ file static class NativeMethods
 {
     [DllImport("advapi32.dll", CharSet = CharSet.Auto)]
     public static extern int RegOpenKeyEx(
-        UIntPtr hKey,
+        nuint hKey,
         string subKey,
         int ulOptions,
         int samDesired,
-        out UIntPtr hkResult
+        out nuint hkResult
     );
 
     [DllImport("advapi32.dll", CharSet = CharSet.Auto)]
     public static extern int RegQueryValueEx(
-        UIntPtr hKey,
+        nuint hKey,
         string lpValueName,
         int lpReserved,
         out uint lpType,
@@ -27,7 +27,7 @@ file static class NativeMethods
 
     [DllImport("user32.dll", CharSet = CharSet.Auto)]
     public static extern int MessageBox(
-        IntPtr hWnd,
+        nint hWnd,
         string text,
         string caption,
         uint type
@@ -50,11 +50,11 @@ internal static partial class Initializer
     }
 
     private static void ShowErrorMessageBox(string title, string message) =>
-        NativeMethods.MessageBox(IntPtr.Zero, message, title, 0x00000010);
+        NativeMethods.MessageBox(0, message, title, 0x00000010);
 
     private static string? GetCurrentUserRegistryValue(string key, string entry)
     {
-        if (NativeMethods.RegOpenKeyEx(new UIntPtr(0x80000001u), key, 0, 0x20019, out var keyHandle) != 0)
+        if (NativeMethods.RegOpenKeyEx(0x80000001u, key, 0, 0x20019, out var keyHandle) != 0)
             return null;
 
         var size = 1024u;
