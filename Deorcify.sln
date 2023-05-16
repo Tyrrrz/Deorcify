@@ -13,9 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{1D75832C-6
 		License.txt = License.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deorcify.DemoConsole", "Deorcify.DemoConsole\Deorcify.DemoConsole.csproj", "{999C62CA-E1D0-4C50-914E-63F792B02442}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deorcify.DemoWpf", "Deorcify.DemoWpf\Deorcify.DemoWpf.csproj", "{3FC02E05-257E-4BEA-BD61-F6EDFB0DAABA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deorcify.Demo", "Deorcify.Demo\Deorcify.Demo.csproj", "{999C62CA-E1D0-4C50-914E-63F792B02442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,9 +32,5 @@ Global
 		{999C62CA-E1D0-4C50-914E-63F792B02442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999C62CA-E1D0-4C50-914E-63F792B02442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{999C62CA-E1D0-4C50-914E-63F792B02442}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3FC02E05-257E-4BEA-BD61-F6EDFB0DAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FC02E05-257E-4BEA-BD61-F6EDFB0DAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FC02E05-257E-4BEA-BD61-F6EDFB0DAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FC02E05-257E-4BEA-BD61-F6EDFB0DAABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
