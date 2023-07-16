@@ -1,6 +1,6 @@
 # Deorcify
 
-[![Status](https://img.shields.io/badge/status-maintenance-ffd700.svg)](https://github.com/Tyrrrz/.github/blob/master/docs/project-status.md)
+[![Status](https://img.shields.io/badge/status-active-47c219.svg)](https://github.com/Tyrrrz/.github/blob/master/docs/project-status.md)
 [![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://tyrrrz.me/ukraine)
 [![Build](https://img.shields.io/github/actions/workflow/status/Tyrrrz/Deorcify/main.yml?branch=master)](https://github.com/Tyrrrz/Deorcify/actions)
 [![Version](https://img.shields.io/nuget/v/Deorcify.svg)](https://nuget.org/packages/Deorcify)
