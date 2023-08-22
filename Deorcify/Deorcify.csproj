@@ -23,4 +23,8 @@
     <Content Include="*.cs" Pack="true" PackagePath="content/Deorcify" Visible="false" BuildAction="compile" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CSharpier.MsBuild" Version="0.25.0" PrivateAssets="all" />
+  </ItemGroup>
+
 </Project>

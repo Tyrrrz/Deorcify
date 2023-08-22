@@ -26,12 +26,7 @@ file static class NativeMethods
     );
 
     [DllImport("user32.dll", CharSet = CharSet.Auto)]
-    public static extern int MessageBox(
-        nint hWnd,
-        string text,
-        string caption,
-        uint type
-    );
+    public static extern int MessageBox(nint hWnd, string text, string caption, uint type);
 }
 
 internal static partial class Initializer

@@ -14,13 +14,13 @@ internal static partial class Initializer
             Environment.GetEnvironmentVariable("SLAVA_UKRAINI"),
             "1",
             StringComparison.OrdinalIgnoreCase
-        ) ||
-        string.Equals(
+        )
+        || string.Equals(
             Environment.GetEnvironmentVariable("FUCK_RUSSIA"),
             "1",
             StringComparison.OrdinalIgnoreCase
-        ) ||
-        string.Equals(
+        )
+        || string.Equals(
             Environment.GetEnvironmentVariable("RUSNI"),
             "PYZDA",
             StringComparison.OrdinalIgnoreCase
@@ -30,8 +30,10 @@ internal static partial class Initializer
     {
         var locale = CultureInfo.CurrentCulture.Name;
 
-        if (locale.EndsWith("-ru", StringComparison.OrdinalIgnoreCase) ||
-            locale.EndsWith("-by", StringComparison.OrdinalIgnoreCase))
+        if (
+            locale.EndsWith("-ru", StringComparison.OrdinalIgnoreCase)
+            || locale.EndsWith("-by", StringComparison.OrdinalIgnoreCase)
+        )
         {
             return true;
         }
@@ -40,8 +42,10 @@ internal static partial class Initializer
         {
             var region = GetCurrentUserRegistryValue(@"Control Panel\International\Geo", "Name");
 
-            if (string.Equals(region, "ru", StringComparison.OrdinalIgnoreCase) ||
-                string.Equals(region, "by", StringComparison.OrdinalIgnoreCase))
+            if (
+                string.Equals(region, "ru", StringComparison.OrdinalIgnoreCase)
+                || string.Equals(region, "by", StringComparison.OrdinalIgnoreCase)
+            )
             {
                 return true;
             }
@@ -58,8 +62,7 @@ internal static partial class Initializer
 
         var assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
 
-        var message =
-            $"""
+        var message = $"""
             Based on your system settings, it appears you're located in Russia or Belarus. You cannot use {assemblyName} on the territory of a terrorist state.
 
             If you believe this to be an error, check your system settings and make sure your country and region are configured correctly.

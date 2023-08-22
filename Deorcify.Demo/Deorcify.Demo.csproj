@@ -9,4 +9,8 @@
     <Compile Include="../Deorcify/**/*.cs" Exclude="**/obj/**/*" Visible="false" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CSharpier.MsBuild" Version="0.25.0" PrivateAssets="all" />
+  </ItemGroup>
+
 </Project>
