@@ -3,8 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>true</IsPackable>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,8 +12,9 @@
     <PackageProjectUrl>https://github.com/Tyrrrz/Deorcify</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/Deorcify/blob/master/Changelog.md</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
