@@ -10,7 +10,7 @@
     <Description>Prevents your application or library from being used in Russia and Belarus.</Description>
     <PackageTags>protest source-only</PackageTags>
     <PackageProjectUrl>https://github.com/Tyrrrz/Deorcify</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/Tyrrrz/Deorcify/blob/master/Changelog.md</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/Tyrrrz/Deorcify/releases/tag/$(Version)</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <DevelopmentDependency>true</DevelopmentDependency>
