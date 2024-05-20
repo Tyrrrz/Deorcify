@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deorcify", "Deorcify\Deorci
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{1D75832C-6243-4BE0-849C-AC3F43F8BB2A}"
 	ProjectSection(SolutionItems) = preProject
-		Changelog.md = Changelog.md
 		Directory.Build.props = Directory.Build.props
 		Readme.md = Readme.md
 		License.txt = License.txt
