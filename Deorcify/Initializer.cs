@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -24,7 +25,9 @@ internal static partial class Initializer
             Environment.GetEnvironmentVariable("RUSNI"),
             "PYZDA",
             StringComparison.OrdinalIgnoreCase
-        );
+        )
+        || File.Exists("SLAVA_UKRAINI")
+        || File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SLAVA_UKRAINI"));
 
     private static bool IsRestricted()
     {
@@ -63,11 +66,12 @@ internal static partial class Initializer
         var assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
 
         var message = $"""
-            Based on your system settings, it appears you're located in Russia or Belarus. You cannot use {assemblyName} on the territory of a terrorist state.
+            Your system settings indicate that you're located in Russia or Belarus. You cannot use {assemblyName} on the territory of a terrorist state.
 
             If you believe this to be an error, check your system settings and make sure your country and region are configured correctly.
 
             If you wish to bypass this check, set the environment variable `SLAVA_UKRAINI=1` in your system settings.
+            Alternatively, you can also create a file named `SLAVA_UKRAINI` (no extension) in the current working directory.
             """;
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
