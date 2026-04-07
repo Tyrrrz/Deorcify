@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Misc/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="License.txt" />
+    <File Path="Readme.md" />
+  </Folder>
+
+  <Project Path="Deorcify.Demo/Deorcify.Demo.csproj" />
+  <Project Path="Deorcify/Deorcify.csproj" />
+</Solution>

@@ -3,9 +3,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="../Deorcify/**/*.cs" Exclude="**/obj/**/*" Visible="false" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="CSharpier.MsBuild" PrivateAssets="all" />
   </ItemGroup>
