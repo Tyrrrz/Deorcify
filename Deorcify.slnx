@@ -6,6 +6,6 @@
     <File Path="Readme.md" />
   </Folder>
 
-  <Project Path="Deorcify.Demo/Deorcify.Demo.csproj" />
   <Project Path="Deorcify/Deorcify.csproj" />
+  <Project Path="Deorcify.Demo/Deorcify.Demo.csproj" />
 </Solution>
