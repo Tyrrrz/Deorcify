@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="../Deorcify/**/*.cs" Exclude="**/obj/**/*" Visible="false" />
+    <PackageReference Include="CSharpier.MsBuild" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSharpier.MsBuild" PrivateAssets="all" />
+    <ProjectReference Include="../Deorcify/Deorcify.csproj" />
   </ItemGroup>
 </Project>

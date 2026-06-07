@@ -8,8 +8,11 @@
 [![Discord](https://img.shields.io/discord/869237470565392384?label=discord)](https://discord.gg/2SUWKFnHSm)
 [![Fuck Russia](https://img.shields.io/badge/fuck-russia-e4181c.svg?labelColor=000000)](https://twitter.com/tyrrrz/status/1495972128977571848)
 
-**Deorcify** is a source-only package that can be added to any .NET application or library to prevent it from running in Russia and Belarus.
+**Deorcify** is a package that can be added to any .NET application or library to prevent it from running in Russia and Belarus.
 
 ## Install
 
 - 📦 [NuGet](https://nuget.org/packages/Deorcify): `dotnet add package Deorcify`
+
+> [!TIP]
+> You can use [**Binternal**](https://github.com/Tyrrrz/Binternal) to internalize this library if you prefer to avoid taking an external dependency.

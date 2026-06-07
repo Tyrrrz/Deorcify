@@ -4,11 +4,12 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using Deorcify.Utils;
 
 namespace Deorcify;
 
 #pragma warning disable CA2255
-internal static partial class Initializer
+public static partial class Initializer
 {
     private static bool IsBypassed() =>
         string.Equals(
@@ -43,7 +44,10 @@ internal static partial class Initializer
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            var region = GetCurrentUserRegistryValue(@"Control Panel\International\Geo", "Name");
+            var region = Registry.GetCurrentUserRegistryValue(
+                @"Control Panel\International\Geo",
+                "Name"
+            );
 
             if (
                 string.Equals(region, "ru", StringComparison.OrdinalIgnoreCase)
@@ -76,10 +80,10 @@ internal static partial class Initializer
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            ShowErrorMessageBox("Restricted region", message);
+            MessageBox.ShowError("Restricted region", message);
             Environment.Exit(1);
         }
-        else if (IsConsoleAttached())
+        else if (Console.IsAttached)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Error.WriteLine(message);

@@ -1,31 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <IsPackable>true</IsPackable>
+    <IsTrimmable
+      Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))"
+      >true</IsTrimmable
+    >
+    <IsAotCompatible
+      Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))"
+      >true</IsAotCompatible
+    >
   </PropertyGroup>
-
-  <PropertyGroup>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Content
-      Include="*.cs"
-      Pack="true"
-      PackagePath="contentFiles/cs/any/Deorcify"
-      Visible="false"
-      BuildAction="compile"
-    />
-    <Content
-      Include="*.cs"
-      Pack="true"
-      PackagePath="content/Deorcify"
-      Visible="false"
-      BuildAction="compile"
-    />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CSharpier.MsBuild" PrivateAssets="all" />
