@@ -12,6 +12,11 @@
     >
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageIcon>favicon.png</PackageIcon>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CSharpier.MsBuild" PrivateAssets="all" />
     <PackageReference Include="PolyShim" PrivateAssets="all" />
