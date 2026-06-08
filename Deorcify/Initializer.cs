@@ -9,6 +9,9 @@ using Deorcify.Utils;
 namespace Deorcify;
 
 #pragma warning disable CA2255
+/// <summary>
+/// Deorcify initializer.
+/// </summary>
 public static partial class Initializer
 {
     private static bool IsBypassed() =>
@@ -61,6 +64,9 @@ public static partial class Initializer
         return false;
     }
 
+    /// <summary>
+    /// Module initializer that checks if the user is located in Russia or Belarus and prevents the application from running if so.
+    /// </summary>
     [ModuleInitializer]
     public static void Execute()
     {
